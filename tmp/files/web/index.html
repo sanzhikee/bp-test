@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Разборка на кухне</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        html {
+            font-family: Verdana, sans-serif;
+            color: #333;
+        }
+
+        p {
+            margin: 0 0 15px 0;
+        }
+
+        textarea {
+            padding: 5px 10px;
+        }
+
+        #content {
+            display: block;
+            width: 360px;
+            padding: 15px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            background: #f4f4f4;
+            font-size: 0;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        #button {
+            display: block;
+            margin-bottom: 15px;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 30px;
+            border-radius: 3px;
+            background-color: #5cb85c;
+            border-color: #4cae4c;
+        }
+
+        #button:hover,
+        #button:focus {
+            background: #4cae4c;
+            border-color: #3a833a;
+        }
+
+        #wall {
+            width: 100%;
+            height: 200px;
+            resize: none;
+            outline: none;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="content">
+    <a href="#" id="button" class="js-neutralize-women">Повесить полочку</a>
+    <textarea id="wall" class="js-wall"></textarea>
+</div>
+
+<!-- подключаем ядро приложения -->
+<script src="assets/application.js" type="text/javascript"></script>
+
+</body>
+</html>

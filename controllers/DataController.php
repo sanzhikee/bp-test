@@ -9,7 +9,26 @@
 namespace app\controllers;
 
 
-class DataController
-{
+use app\models\Main;
+use yii\rest\Controller;
 
+class DataController extends Controller
+{
+    public function behaviors()
+    {
+        $parent = parent::behaviors();
+        unset($parent['contentNegotiator']['formats']['application/xml']);
+
+        return $parent;
+    }
+    public function actionIndex()
+    {
+        $main = new Main(false);
+        $data = $main->getData();
+        if(empty($data['categories']) && empty($data['files'])){
+            return "error";
+        }
+
+        return $main->getData();
+    }
 }
